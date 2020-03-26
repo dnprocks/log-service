@@ -1,3 +1,4 @@
-const { createLog } = require('./LogController');
+const { createLog } = require("./LogController");
+const { register, login } = require("./userController");
 
-module.exports = { createLog };
+module.exports = { createLog, register, login };
