@@ -50,6 +50,8 @@ const login = async (req, res) => {
     createdAt: new Date(user.createdAt).getTime().toString(),
     token: generateToken({ id: user.id }, res)
   });
+
+  
 };
 
 function generateToken(params = {}, res) {
