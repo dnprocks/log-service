@@ -21,7 +21,7 @@ const getFakeVisits = () => {
   for (var i = 0; i < 100; i++) {
     const visit = {
       id: i + 1,
-      date: new Date().toLocaleString(),
+      date: new Date().toISOString().replace("Z", ""),
       serviceOrder: Math.ceil(
                                 Math.random() * (999999 - 100000) + 100000
                               ).toString(),
