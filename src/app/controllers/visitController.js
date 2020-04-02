@@ -20,15 +20,14 @@ const getFakeVisits = () => {
   const list = new Array();
   for (var i = 0; i < 100; i++) {
     const visit = {
-      id: Math.ceil(
-        Math.random() * (999999 - 100000) + 100000
-      ),
-      date: new Date(),
+      id: i + 1,
+      date: new Date().toLocaleString(),
       serviceOrder: Math.ceil(
                                 Math.random() * (999999 - 100000) + 100000
                               ).toString(),
       place: faker.company.companyName(),
-      brand: faker.image.business(50, 50),
+      brand: faker.image.avatar(),
+      situation: "situation"
     }
 
     list.push(visit);
